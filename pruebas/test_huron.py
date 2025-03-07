@@ -3,44 +3,44 @@ from modelos.huron import Huron
 from modelos.boa import Boa
 
 
-# class TestHuron(unittest.TestCase):
-#     def setUp(self):
-#         print("iniciando setUp")
-#         self.huron = Huron("Huron", 400, 5550, "Venezuela", 3.2)
-#         print(self.huron.__dict__)
+class TestHuron(unittest.TestCase):
+    def setUp(self):
+        print("iniciando setUp")
+        self.huron = Huron("Huron", 400, 5550, "Venezuela", 3.2)
+        print(self.huron.__dict__)
 
-#     def test_hacer_ruido(self):
-#         print("iniciando test_hacer_ruido")
-#         self.assertEqual(self.huron.hacer_ruido(), print("¡Eek Eek!"))
+    def test_hacer_ruido(self):
+        print("iniciando test_hacer_ruido")
+        self.assertEqual(self.huron.hacer_ruido(), print("¡Eek Eek!"))
 
-#     def test_calcular_flete(self):
-#         print("iniciando test_calcular_flete")
-#         self.assertEqual(self.huron.calcular_flete(), 400*3.2)
+    def test_calcular_flete(self):
+        print("iniciando test_calcular_flete")
+        self.assertEqual(self.huron.calcular_flete(), 400*3.2)
     
 
 
 
-# class TestBoa(unittest.TestCase):
-#     def setUp(self):
-#         self.boa = Boa("Boa_Test", 400, 5550, "Venezuela", 6)
-#     def test_hacer_ruido(self):
-#         print("iniciando test_hacer_ruido")
-#         self.assertEqual(self.boa.hacer_ruido(), print("¡Tsss!"))
+class TestBoa(unittest.TestCase):
+    def setUp(self):
+        self.boa = Boa("Boa_Test", 400, 5550, "Venezuela", 6)
+    def test_hacer_ruido(self):
+        print("iniciando test_hacer_ruido")
+        self.assertEqual(self.boa.hacer_ruido(), print("¡Tsss!"))
 
-#     def test_calcular_flete(self):
-#         print("iniciando test_calcular_flete")
-#         self.assertEqual(self.boa.calcular_flete(), 400*6)
+    def test_calcular_flete(self):
+        print("iniciando test_calcular_flete")
+        self.assertEqual(self.boa.calcular_flete(), 400*6)
     
-#     def test_comer_raton(self):
-#         print("iniciando test_comer_raton")
-#         ratones_comidos = 5
-#         self.assertEqual(self.boa.comer_raton(ratones_comidos), print(f'Éxito'))
+    def test_comer_raton(self):
+        print("iniciando test_comer_raton")
+        ratones_comidos = 5
+        self.assertEqual(self.boa.comer_raton(ratones_comidos), print(f'Éxito'))
     
-#     def test_muchos_ratones(self):
-#         print("iniciando test_muchos_ratones")
-#         ratones_comidos = 6
-#         print(self.boa.ratones_comidos)
-#         self.assertEqual(self.boa.comer_raton(ratones_comidos), print("Demasiados Ratones!"))
+    def test_muchos_ratones(self):
+        print("iniciando test_muchos_ratones")
+        ratones_comidos = 6
+        print(self.boa.ratones_comidos)
+        self.assertEqual(self.boa.comer_raton(ratones_comidos), print("Demasiados Ratones!"))
 
 
 from modelos.guerderia import Guarderia
